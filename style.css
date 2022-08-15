@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Press Start 2P", sans-serif;
+  /* color: #eee; */
+  color: #222;
+  /* background-color: #222; */
+  background-color: #ffff;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: auto 100px auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.change_color {
+  background: #222;
+  border: solid 5px black;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.show_calculator {
+  text-align: center;
+  border: solid 5px black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.show_calculator:hover {
+  background: #222;
+  color: white;
+}
+.main_content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.container {
+  padding: 5px;
+}
+.calculation {
+  width: 99%;
+  height: 30vh;
+  border-radius: 5px;
+  border: 5px solid black;
+  text-align: center;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  height: 65vh;
+}
+
+.hidden {
+  opacity: 0;
+}
+.show {
+  opacity: 100;
+}
+
+.footer {
+  text-align: center;
+  background-color: #222;
+  color: #eee;
+  padding: 2rem;
+}
