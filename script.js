@@ -42,16 +42,34 @@ show_calculator.addEventListener("click", function () {
     container.classList.add("hidden");
   }
 });
-
+let arr = "";
 btnInput.forEach((btn) => {
   btn.addEventListener("click", function () {
     if (calculation.textContent === "Enter") {
       calculation.textContent = "";
+      calculation.textContent = "";
     }
     if (btn.textContent === "AC") {
       calculation.textContent = "";
+      arr = "";
     } else {
-      calculation.textContent += btn.textContent;
+      if (btn.textContent === "=") {
+        calculation.textContent = "";
+        calculation.textContent = eval(arr);
+        arr = "";
+      } else if (btn.textContent === "÷") {
+        calculation.textContent += btn.textContent;
+        arr += "/";
+      } else if (btn.textContent === "×") {
+        calculation.textContent += btn.textContent;
+        arr += "*";
+      } else {
+        calculation.textContent += btn.textContent;
+        arr += btn.textContent;
+      }
     }
+    console.log(arr);
+
+    console.log(arr);
   });
 });
