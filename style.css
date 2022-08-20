@@ -76,3 +76,12 @@ body {
   color: #eee;
   padding: 2rem;
 }
+.btn {
+  background-color: yellow;
+  border: white 4px solid;
+  padding: 5px;
+}
+.btn:hover {
+  background-color: azure;
+  border: yellow 4px solid;
+}
