@@ -6,6 +6,7 @@ const container = document.querySelector(".container");
 const btnInput = document.querySelectorAll(".btnCalculator");
 const calculation = document.querySelector(".calculation");
 const footer = document.querySelector(".footer");
+const gift=document.querySelector(".gift_image")
 
 change_color.addEventListener("click", function () {
   if (change_color.textContent === "Night") {
@@ -44,7 +45,10 @@ show_calculator.addEventListener("click", function () {
 });
 let arr = "";
 btnInput.forEach((btn) => {
-  btn.addEventListener("click", function () {
+  
+  btn.addEventListener("click", function (e) {
+    e.preventDefault()
+    gift.src="https://media0.giphy.com/media/tHufwMDTUi20E/giphy.gif?cid=ecf05e47de58244b32e02b05c810b18e809e75e1892a2c85&rid=giphy.gif&ct=g"
     if (calculation.textContent === "Enter") {
       calculation.textContent = "";
       calculation.textContent = "";
@@ -56,6 +60,7 @@ btnInput.forEach((btn) => {
       if (btn.textContent === "=") {
         calculation.textContent = "";
         calculation.textContent = eval(arr);
+        gift.src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif"
         arr = "";
       } else if (btn.textContent === "÷") {
         calculation.textContent += btn.textContent;
